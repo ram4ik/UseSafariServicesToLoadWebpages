@@ -7,10 +7,20 @@
 //
 
 import SwiftUI
+import SafariServices
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Button(action: {
+                if let url = URL(string: "https://www.google.com") {
+                    UIApplication.shared.open(url)
+                    
+                }
+            }) {
+                Text("Go to Google")
+            }
+        }
     }
 }
 
